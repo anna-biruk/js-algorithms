@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Algrithms</title>
+    <script src="./js/swap.js"></script>
+    <script src="./js/bubbleSort.js"></script>
+</head>
+<body>
+    <input type="text" id="initialArray" value="5,2,1,6,8,0"> <br><br>
+    <input type="button" value="Bubble Sort"  onclick="getInputValue()">
+    <div id="result"></div>
+    <script>
+    function getInputValue() {
+        const inputArray = document.getElementById('initialArray').value.split(',').map((stringNumber)=> {
+            return Number.parseInt(stringNumber, 10);
+        });
+        console.log(inputArray);
+         const result = bubbleSort(inputArray);
+         document.getElementById('result').innerText = result.join(',');
+    }
+    </script>
+</body>
+</html>
